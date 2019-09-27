@@ -1,5 +1,5 @@
-from simulator.utils import OptionParser
-from simulator.generator import generate_log
+from src.utils import OptionParser
+from src.generator import generate_log
 
 DEBUG = False
 
