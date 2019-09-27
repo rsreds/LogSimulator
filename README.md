@@ -1,7 +1,8 @@
 # Log Simulator
 
-![Log Simulator 2019](static/img/LogoLogSimulator.png | width=300)
-
+<p align="center">
+    <img src="static/img/LogoLogSimulator.png" width="300" >
+</p>
 Log Simulator is a project aimed at the development of a Log File generator with Python 3.6 backend.
 The Log file generator should be able to produce a text file simulating a Log file of unstructured text, with a defined number of source template for every log line.
 The number of parameters in every line and the size of the resulting file should be tunable from a configuration file.
