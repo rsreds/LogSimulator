@@ -3,6 +3,9 @@ import json
 
 PROGRAM_VERSION = 'v0.1'
 
+# Deafult config keyvalue
+DEFAULT_FILENAME = './log.txt'
+
 
 class OptionParser():
     def __init__(self, program_name='PROG'):
@@ -17,9 +20,12 @@ class OptionParser():
 def read_config(filename):
     with open(filename, 'r') as f:
         data = json.load(f)
-    if data:
-        return data
-    else:
-        print('Error in the configuration file')
-        print('ABORT')
+    if data is None:
+        print('Empty configuration file')
         exit()
+
+    if 'filename' not in data:
+        data['filename'] = DEFAULT_FILENAME
+    if 'lines' not in data:
+        data['lines'] = 1000
+    return data
