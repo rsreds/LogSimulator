@@ -5,4 +5,4 @@ def generate_log():
     config_filename = 'config.json'
     config_dict = read_config(config_filename)
     lines = config_dict['lines']
-    print(f"The line to generate are: {lines}")
+    print(f"The lines to generate are: {lines}")

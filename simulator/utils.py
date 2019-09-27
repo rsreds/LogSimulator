@@ -20,4 +20,6 @@ def read_config(filename):
     if data:
         return data
     else:
-        print('error')
+        print('Error in the configuration file')
+        print('ABORT')
+        exit()
