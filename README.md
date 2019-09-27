@@ -15,9 +15,9 @@ The parameters for the log files generation are configurable from the `config.js
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests on `dev` branch are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-The main developments branch is `dev`, please make a merge request before merging to the master branch.
+The main developments branch is `dev`, please make sure that the dev version is fully functional before pull into `master` branch.
 
 Please make sure to update tests as appropriate.
 
