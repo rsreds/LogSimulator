@@ -1,4 +1,5 @@
 {
     "filename": "./log",
-    "lines": 300
+    "lines": 300,
+    "templates": 15
 }

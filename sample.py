@@ -1,18 +1,19 @@
+import logging
 from src.utils import OptionParser
+from src.utils import config_loggers
 from src.generator import generate_log
 
-DEBUG = False
+logger = logging.getLogger(__name__)
 
 
 def run():
     generate_log()
-    if DEBUG:
-        print('Run main function')
 
 
 if __name__ == "__main__":
     """Main Function"""
     optmgr = OptionParser('sample')
     opts = optmgr.parser.parse_args()
-    DEBUG = True if opts.debug else False
+    level = logging.DEBUG if opts.debug else logging.INFO
+    config_loggers(level)
     run()
