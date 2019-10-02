@@ -1,5 +1,8 @@
 import random
+import logging
 from .utils import read_config
+
+logger = logging.getLogger(__name__)
 
 
 class Template():
@@ -36,6 +39,7 @@ def generate_templates(params):
     for i in range(n):
         t = Template()
         templates.append(t)
+        logger.debug(f'Generated template {t.template}')
     return templates
 
 
@@ -55,7 +59,7 @@ def generate_log():
     lines = config_dict['lines']
 
     templates = generate_templates(config_dict)
-
+    logger.debug(f'Generated templates')
     with open(filename, 'w') as f:
         for i in range(lines):
             t = select_template(templates)
