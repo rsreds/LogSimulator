@@ -3,6 +3,9 @@ from .utils import read_config
 
 
 class Template():
+    """Template class"""
+    # Constructors
+
     def __init__(self):
         ran = random.randint(3, 7)
         lista = []
@@ -14,7 +17,9 @@ class Template():
                 lista.append(f'PARAM')
         self.template = lista
 
+    # Methods
     def write_line(self):
+        """Print line based on template"""
         string = ""
         for i, t in enumerate(self.template):
             if t == 'PARAM':
@@ -25,6 +30,7 @@ class Template():
 
 
 def generate_templates(params):
+    """Generate templates by on configuration file"""
     n = params['templates']
     templates = []
     for i in range(n):
@@ -34,13 +40,14 @@ def generate_templates(params):
 
 
 def select_template(template_list):
+    """Select template to use for next line"""
     n = len(template_list)
     rnd = random.randint(0, n-1)
     return template_list[rnd]
 
 
 def generate_log():
-    """Generate Log Files based on configuration"""
+    """Generate Log Files"""
     config_filename = 'config.json'
     config_dict = read_config(config_filename)
 

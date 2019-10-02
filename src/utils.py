@@ -8,6 +8,8 @@ DEFAULT_FILENAME = './log.txt'
 
 
 class OptionParser():
+    """Custom parsing class for command line arguments"""
+
     def __init__(self, program_name='PROG'):
         """User based option parser"""
         self.parser = argparse.ArgumentParser(program_name)
@@ -18,6 +20,7 @@ class OptionParser():
 
 
 def read_config(filename):
+    """Read config file and output dict of parameters"""
     with open(filename, 'r') as f:
         data = json.load(f)
     if data is None:
